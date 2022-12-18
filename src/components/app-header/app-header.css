@@ -1,0 +1,24 @@
+.header-wrap{
+    display:grid;
+    grid-template-columns: 1fr min-content;
+    box-shadow: -3px 12px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 50px;
+    height: 70px;
+}
+.header-title{
+    width: 400px;
+    margin-left: 20px;
+    align-self: center;
+}
+.header-credits{
+    width: 200px;
+    text-align: center;
+    height: 50px;
+    align-self: center;
+    background-color: #ffdd2d;
+    margin-right: 20px;
+}
+.header-credits p{
+    margin-top: 12px;
+    margin-bottom: 0px;
+}

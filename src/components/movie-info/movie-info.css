@@ -1,0 +1,73 @@
+.movie-info{
+    margin-left: 50px;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    width: 90%;
+    min-height: 600px;
+}
+.crumbs{
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+.crumbs p{
+    margin-bottom: 0px;
+}
+.edit-button{
+    padding: 0;
+    border: none;
+    background-color:#ffdd2d;
+    width: 100px;
+    cursor: pointer;
+}
+.edit-button:hover{
+    background-color:#ff7a2d;
+}
+.edit-button:active{
+    background-color:#ff7a2dc4;
+}
+h1{
+    margin: 0;
+}
+p{
+    margin-top: 5px;
+}
+.top{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.top-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.top-left-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.top-right-info{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+ul{
+    width: 150px;
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+li{
+    margin-bottom: 5px;
+}
+.bottom-info{
+    width: 500px;
+    margin-left: 20px;
+}
+.special{
+    color:#7e7e7e;
+}
