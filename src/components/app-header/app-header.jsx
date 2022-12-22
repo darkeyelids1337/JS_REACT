@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import './app-header.css';
-const AppHeader =() => {
+const AppHeader = () => {
     return (
         <div className="header-wrap">
             <div className="header-title">
@@ -10,6 +10,6 @@ const AppHeader =() => {
                 <p>by Kamyzin Artem</p>
             </div>
         </div>
-    )
-}
+    );
+};
 export default AppHeader;

@@ -1,19 +1,18 @@
-import { useEffect } from "react";
-import { OverlayScrollbars } from "overlayscrollbars";
+import {useEffect} from 'react';
+import {OverlayScrollbars} from 'overlayscrollbars';
 
-const useScrollbar =(root, hasScroll)=>{
+const useScrollbar = (root, hasScroll) => {
     useEffect(() => {
         let scrollBars;
-        if(root.current && hasScroll){
-           scrollBars =  OverlayScrollbars(root.current, {})
+        if (root.current && hasScroll) {
+            scrollBars = OverlayScrollbars(root.current, {});
         }
 
         return () => {
-            if(scrollBars){
+            if (scrollBars) {
                 scrollBars.destroy();
-                
             }
-        }
-    }, [root, hasScroll])
-}
+        };
+    }, [root, hasScroll]);
+};
 export {useScrollbar};
