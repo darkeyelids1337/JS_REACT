@@ -13,14 +13,13 @@ const App = () => {
     const [isAdd, setIsAdd] = useState(false);
     const [editId, setEditId] = useState();
     const [term, changeTerm] = useState('');
-    async function fetchAll() {
-        await fetch('http://localhost:3000/movies')
-            .then(res => res.json())
-            .then(data => setData(data))
-            .catch(() => alert('Error in fetch!'));
-    }
     useEffect(() => {
-        fetchAll();
+        (async function fetchAll() {
+            await fetch('http://localhost:3000/movies')
+                .then(res => res.json())
+                .then(data => setData(data))
+                .catch(() => alert('Error in fetch!'));
+        })();
     }, []);
     useEffect(() => {
         setForm(false);
@@ -36,7 +35,14 @@ const App = () => {
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 })
-                    .then(() => fetchAll())
+                    .then(() =>
+                        (async function fetchAll() {
+                            await fetch('http://localhost:3000/movies')
+                                .then(res => res.json())
+                                .then(data => setData(data))
+                                .catch(() => alert('Error in fetch!'));
+                        })(),
+                    )
                     .then(() => {
                         setIsAdd(false);
                     })
@@ -50,7 +56,14 @@ const App = () => {
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 })
-                    .then(() => fetchAll())
+                    .then(() =>
+                        (async function fetchAll() {
+                            await fetch('http://localhost:3000/movies')
+                                .then(res => res.json())
+                                .then(data => setData(data))
+                                .catch(() => alert('Error in fetch!'));
+                        })(),
+                    )
                     .then(() => setIsAdd(false))
                     .then(() => setMovieData(formData))
                     .catch(() => alert('Error in fetch!'));
