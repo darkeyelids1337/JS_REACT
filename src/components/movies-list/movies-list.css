@@ -1,0 +1,28 @@
+.movies-list-wrapper{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 500px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    text-align: center;
+}
+.movies-list-crumbs{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+.add-button{
+    padding: 0;
+    border: none;
+    background-color:#ffdd2d;
+    width: 100px;
+    cursor: pointer;
+}
+.add-button:hover{
+    background-color:#ff7a2d;
+}
+.add-button:active{
+    background-color:#ff7a2dc4;
+}
+.card.toggled{
+    border: 1px solid rgba(108, 108, 108, 0.81);
+}
